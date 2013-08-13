@@ -1,0 +1,1 @@
+<span>Hello World! I'm a new Module</span>
