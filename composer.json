@@ -1,0 +1,28 @@
+{
+    "name": "lleite/skeleton",
+    "version": "0.1",
+    "source": {
+        "url": "git@github.com:lleitep3/skeleton.git",
+        "type": "git",
+        "reference": "master"
+    }
+    ,
+    "authors": [
+        {
+            "name": "Leandro Leite",
+            "email": "leandro@leandroleite.info"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "respect/rest": "dev-develop",
+        "respect/relational": "dev-master",
+        "respect/config": "dev-nested-variables"
+    },
+    "autoload": {
+        "psr-0": {
+            "" : "Application/",
+            "Respect": "vendor/respect/"
+        }
+    }
+}

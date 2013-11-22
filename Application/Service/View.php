@@ -8,10 +8,9 @@ namespace Service;
  */
 abstract class View {
 
-    const EXT = '.php';
-
     protected static $templatePath;
     protected static $baseView = 'index';
+    protected static $ext = '.php';
     protected static $data = array();
     protected static $before = array();
 
@@ -35,17 +34,24 @@ abstract class View {
         self::$baseView = $baseView;
     }
 
+    public static function setExtension($ext) {
+        self::$ext = $ext;
+    }
+
     public static function render() {
         self::dispatchRoutines();
         extract(self::$data);
-        $file = self::$templatePath . DIRECTORY_SEPARATOR
-                . self::$baseView . self::EXT;
+        $file = self::getFullPath();
 
         if (!is_file($file)) {
-            echo "File '{$file}' not exists";
+            throw new \Exception("File '{$file}' not exists", 1);
             exit;
         }
         require $file;
+    }
+
+    public static function getFullPath() {
+        return self::$templatePath . DIRECTORY_SEPARATOR . self::$baseView . self::$ext;
     }
 
     public static function redirect($url) {
@@ -58,13 +64,12 @@ abstract class View {
     }
 
     protected static function dispatchRoutines() {
-        foreach (self::$before as $function)
-            $function();
+        foreach (self::$before as $function) $function();
     }
 
-    public static function add($subpage) {
+    public static function addSubPage($subpage) {
         extract(self::$data);
-        $subpage = str_replace('_', DIRECTORY_SEPARATOR, $subpage) . self::EXT;
+        $subpage = str_replace('_', DIRECTORY_SEPARATOR, $subpage) . self::$ext;
         require self::$templatePath . DIRECTORY_SEPARATOR . $subpage;
     }
 

@@ -17,7 +17,7 @@
     </head>
     <body>
         <div class="container-narrow">            
-            <hr/><?= (isset($page)) ? View::add($page) : 'not page setted!'; ?><hr/>
+            <hr/><?= (isset($page)) ? View::addSubPage($page) : 'not page setted!'; ?><hr/>
         </div> <!-- /container -->
     </body>
 </html>

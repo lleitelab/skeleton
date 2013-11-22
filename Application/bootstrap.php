@@ -4,17 +4,17 @@ use \Service\View;
 use \Respect\Rest\Router;
 
 error_reporting(E_ALL);
+/*
 set_include_path(
         get_include_path() . PATH_SEPARATOR .
-        realpath(__DIR__ . '/../Vendor') . PATH_SEPARATOR .
+        realpath(__DIR__ . '/../vendor') . PATH_SEPARATOR .
         realpath(__DIR__)
 );
-
+*/
 define('PATH_SETTINGS', realpath(__DIR__ . '/../settings/'));
 
 // auto Loader initialize
-require_once realpath(__DIR__ . '/../Vendor/Respect/Loader.php');
-spl_autoload_register(new Respect\Loader());
+require_once realpath(__DIR__ . '/../vendor/autoload.php');
 
 // set base of template path
 View::setTemplatePath(realpath(__DIR__ . '/../resources/template/'));

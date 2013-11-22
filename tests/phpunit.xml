@@ -1,0 +1,35 @@
+<phpunit backupGlobals="true"
+         backupStaticAttributes="false"
+         bootstrap="bootstrap.php"
+         cacheTokens="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         forceCoversAnnotation="false"
+         mapTestClassNameToCoveredClassName="false"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         timeoutForSmallTests="1"
+         timeoutForMediumTests="10"
+         timeoutForLargeTests="60"
+         strict="false"
+         verbose="false">
+   
+   <testsuites>
+      <testsuite name="Service Test Suite">
+         <directory>unit/Service/*Test.php files</directory>
+      </testsuite>
+   </testsuites>
+
+   <filter>
+      <whitelist addUncoveredFilesFromWhitelist="false">
+         <directory suffix=".php">../Application/Service/</directory>
+      </whitelist>
+   </filter>
+
+  <!-- ... -->
+</phpunit>

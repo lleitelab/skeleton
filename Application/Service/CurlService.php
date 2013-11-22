@@ -3,8 +3,7 @@
 namespace Service;
 
 /**
- * Description of CurlService
- *
+ * 
  * @author leandro <leandro@leandroleite.info>
  */
 class CurlService {
