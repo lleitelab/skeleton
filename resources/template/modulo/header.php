@@ -15,7 +15,7 @@
         <![endif]-->
     </head>
     <body>
-    
+
     <!-- Wrap all page content here -->
     <div id="wrap">
 
@@ -29,7 +29,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">Site Model with Bootstrap 3.0.2</a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">

@@ -1,5 +1,5 @@
 <?php use Service\View; ?>
-<?= View::addSubPage('modulo_header'); ?>
+<?php if(isset($pageHeader)) View::addSubPage($pageHeader); ?>
 
       <!-- Begin page content -->
       <div class="container">
@@ -11,4 +11,4 @@
       </div>
     </div>
 
-<?= View::addSubPage('modulo_footer'); ?>
+<?php if(isset($pageFooter)) View::addSubPage($pageFooter); ?>

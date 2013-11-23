@@ -11,7 +11,8 @@ use Respect\Rest\Routable;
 class Index implements Routable {
 
     public function get() {
-        View::set('page', 'modulo_index');
+        View::set('pageHeader', 'modulo_header');
+        View::set('pageFooter', 'modulo_footer');
         View::render();
     }
 
