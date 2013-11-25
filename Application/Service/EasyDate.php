@@ -18,7 +18,7 @@ class EasyDate
     private $daynames = "/^(sunday|monday|tuesday|wednesday|thursday|friday|saturday|sun|mon|tue|wed|thu|fri|sat)$/";
     private $period = "/^(day|days|week|weeks|month|months|year|years)$/";
 
-    public function __construct($string)
+    public function __construct($string = now)
     {
         $this->dateTime = new \DateTime($string);
     }
