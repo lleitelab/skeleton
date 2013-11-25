@@ -22,12 +22,7 @@ class EasyDate
     {
         $this->dateTime = new \DateTime($string);
     }
-
-    public function get(EasyDate $easyDate)
-    {
-        return $easyDate->toString();
-    }
-
+    
     public function today()
     {
         $this->dateTime = new DateTime('now');
