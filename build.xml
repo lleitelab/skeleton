@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Skeleton" default="full" basedir="." description="a demo project">
+    <property file="./build.properties" />
+
+    <target name="full" depends="phpunit, phpcpd"/>
+    
+    <target name="phpunit">
+        <phpunit bootstrap="tests/bootstrap.php">
+            <formatter type="plain" usefile="false"/>
+            <batchtest>
+                <fileset dir="tests/unit">
+                    <include name="**/*Test.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+    </target>
+
+    <target name="phpcpd">
+        <phpcpd>
+            <fileset dir="${builddir}" id="filestocpd">
+                <include name="app/**/*.php" />
+            </fileset>
+        </phpcpd>
+    </target>
+</project>

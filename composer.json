@@ -1,8 +1,8 @@
 {
-    "name": "lleite/skeleton",
-    "version": "0.1",
+    "name": "lleitelab/skeleton",
+    "version": "0.2",
     "source": {
-        "url": "git@github.com:lleitep3/skeleton.git",
+        "url": "git@github.com:lleitelab/skeleton.git",
         "type": "git",
         "reference": "master"
     }
@@ -11,17 +11,22 @@
         {
             "name": "Leandro Leite",
             "email": "leandro@leandroleite.info"
+        },
+        {
+            "name": "Ivan Rosolen",
+            "email": "contato@ivanrosolen.com"
         }
     ],
     "require": {
         "php": ">=5.4.0",
         "respect/rest": "dev-develop",
+        "respect/validation": "dev-develop",
         "respect/relational": "dev-master",
         "respect/config": "dev-nested-variables"
     },
     "autoload": {
         "psr-0": {
-            "" : "Application/",
+            "" : "app/",
             "Respect": "vendor/respect/"
         }
     }

@@ -6,7 +6,8 @@ namespace Service;
  * 
  * @author leandro <leandro@leandroleite.info>
  */
-class CurlService {
+class CurlService
+{
 
     protected $options;
     protected $response;

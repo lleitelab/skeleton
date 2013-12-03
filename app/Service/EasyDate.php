@@ -61,6 +61,7 @@ class EasyDate
 
     public function __call($name, $value)
     {
+        $value = $value;
         $name = strtolower($name);
         if(preg_match($this->daynames, $name, $match)) {
             $this->sentence .= $match[1];

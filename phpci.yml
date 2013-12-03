@@ -1,0 +1,36 @@
+build_settings:
+    ignore:
+        - "vendor"
+        - "tests"
+    mysql:
+        host: "localhost"
+        user: "root"
+        pass: "root"
+
+setup:
+    mysql:
+        - "DROP DATABASE IF EXISTS test;"
+        - "CREATE DATABASE test;"
+        - "GRANT ALL PRIVILEGES ON test.* TO test@'localhost' IDENTIFIED BY 'test';"
+    composer:
+        action: "install"
+
+test:
+    php_unit:
+        config:
+            - "phpunit.xml"
+        directory:
+            - "tests/"
+        run_from: "unit/"
+    php_mess_detector:
+        allow_failures: true
+    php_code_sniffer:
+        standard: "PSR2"
+    php_cpd:
+        allow_failures: true
+    grunt:
+        task: "build"
+
+complete:
+    mysql:
+        - "DROP DATABASE IF EXISTS test;"

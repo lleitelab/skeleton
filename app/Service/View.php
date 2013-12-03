@@ -6,7 +6,8 @@ namespace Service;
  * 
  * @author leandro <leandro@leandroleite.info>
  */
-abstract class View {
+abstract class View
+{
 
     protected static $templatePath;
     protected static $baseView = 'index';

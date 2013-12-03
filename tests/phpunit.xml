@@ -8,19 +8,19 @@
          convertWarningsToExceptions="true"
          forceCoversAnnotation="false"
          mapTestClassNameToCoveredClassName="false"
-         processIsolation="false"
-         stopOnError="false"
-         stopOnFailure="false"
+         processIsolation="true"
+         stopOnError="true"
+         stopOnFailure="true"
          stopOnIncomplete="false"
          stopOnSkipped="false"
          timeoutForSmallTests="1"
          timeoutForMediumTests="10"
          timeoutForLargeTests="60"
          strict="false"
-         verbose="false">
+         verbose="true">
    
    <testsuites>
-      <testsuite name="Service Test Suite">
+      <testsuite name="Services">
          <directory>unit/Service/*Test.php files</directory>
       </testsuite>
    </testsuites>
